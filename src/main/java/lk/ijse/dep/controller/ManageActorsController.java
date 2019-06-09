@@ -2,6 +2,8 @@ package lk.ijse.dep.controller;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -23,6 +25,7 @@ import lk.ijse.dep.tableModel.ActorTM;
 import java.io.IOException;
 import java.net.URL;
 import java.util.List;
+import java.util.Optional;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -94,17 +97,47 @@ public class ManageActorsController implements Initializable {
         } catch (Exception ex) {
             Logger.getLogger("lk.ijse.dep.controller").log(Level.SEVERE, null, ex);
         }
+
+        tblActors.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<ActorTM>() {
+            @Override
+            public void changed(ObservableValue<? extends ActorTM> observable, ActorTM oldValue, ActorTM selectedActor) {
+                if (selectedActor == null) {
+                    // Clear Selection
+                    return;
+                }
+
+                txtActorID.setText(selectedActor.getActorID()+"");
+                txtActorName.setText(selectedActor.getActorName());
+                txtActorAge.setText(selectedActor.getAge()+"");
+
+                txtActorID.setEditable(false);
+                btnSaveActor.setDisable(true);
+
+            }
+        });
     }
 
     @FXML
     void btnDeleteActor_OnAction(ActionEvent event) {
+        Alert confirmMsg = new Alert(Alert.AlertType.CONFIRMATION, "Are you sure to delete this Actor?", ButtonType.YES, ButtonType.NO);
+        Optional<ButtonType> buttonType = confirmMsg.showAndWait();
 
+        if (buttonType.get() == ButtonType.YES) {
+            int selectedRow = tblActors.getSelectionModel().getSelectedIndex();
+
+            try {
+                actorBO.remove(Integer.parseInt(txtActorID.getText()));
+                tblActors.getItems().remove(tblActors.getSelectionModel().getSelectedItem());
+                reset();
+
+            } catch (Exception e) {
+                new Alert(Alert.AlertType.ERROR, "Failed to delete the Actor, try again").show();
+                Logger.getLogger("lk.ijse.pos.controller").log(Level.SEVERE, null, e);
+            }
+
+        }
     }
 
-    @FXML
-    void btnMakePurchase_OnMouseClicked(MouseEvent event) {
-
-    }
 
     @FXML
     void btnSaveActor_OnAction(ActionEvent event) {

@@ -53,7 +53,7 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <JFXButton id="btnNewUserAdded" fx:id="btnSaveActor" layoutX="298.0" layoutY="315.0" onAction="#btnSaveActor_OnAction" onMouseClicked="#btnMakePurchase_OnMouseClicked" opacity="0.88" prefHeight="39.0" prefWidth="125.0" ripplerFill="#7cdcff" style="-fx-background-color: #019ddd;" text="Save" textAlignment="CENTER" textFill="WHITE">
+      <JFXButton id="btnNewUserAdded" fx:id="btnSaveActor" layoutX="298.0" layoutY="315.0" onAction="#btnSaveActor_OnAction" opacity="0.88" prefHeight="39.0" prefWidth="125.0" ripplerFill="#7cdcff" style="-fx-background-color: #019ddd;" text="Save" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -66,7 +66,7 @@
             <Image url="@../../../../../../../../../../../../Projects/WEB/UnCompleted/PharmacyManagementSystem/src/main/resources/icons/Capture.PNG" />
          </image>
       </ImageView>
-      <JFXButton id="btnNewUserAdded" fx:id="btnDeleteActor" layoutX="445.0" layoutY="315.0" onAction="#btnDeleteActor_OnAction" onMouseClicked="#btnMakePurchase_OnMouseClicked" opacity="0.88" prefHeight="39.0" prefWidth="125.0" ripplerFill="#7cdcff" style="-fx-background-color: #019ddd;" text="Delete" textAlignment="CENTER" textFill="WHITE">
+      <JFXButton id="btnNewUserAdded" fx:id="btnDeleteActor" layoutX="445.0" layoutY="315.0" onAction="#btnDeleteActor_OnAction" opacity="0.88" prefHeight="39.0" prefWidth="125.0" ripplerFill="#7cdcff" style="-fx-background-color: #019ddd;" text="Delete" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
