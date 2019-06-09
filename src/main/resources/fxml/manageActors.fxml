@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="677.0" prefWidth="856.0" style="-fx-background-color: WHITE;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep.controller.ManageActorsController">
+   <children>
+      <Label fx:id="lblHeading" alignment="CENTER" layoutX="182.0" layoutY="26.0" prefHeight="46.0" prefWidth="497.0" text="Manage Actors" textAlignment="CENTER" textFill="#545e83">
+         <font>
+            <Font name="System Bold" size="31.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblHeading1" alignment="CENTER" layoutX="301.0" layoutY="67.0" prefHeight="21.0" prefWidth="260.0" text="Moive Management System" textAlignment="CENTER" textFill="#898a8fac">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField id="txtUserName" fx:id="txtActorID" focusColor="#019ddd" labelFloat="true" layoutX="236.0" layoutY="140.0" prefHeight="33.0" prefWidth="505.0" unFocusColor="#4d4b4b85">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField id="txtUserName" fx:id="txtActorName" focusColor="#019ddd" labelFloat="true" layoutX="236.0" layoutY="194.0" prefHeight="33.0" prefWidth="505.0" unFocusColor="#4d4d4d84">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField id="txtUserName" fx:id="txtActorAge" focusColor="#019ddd" labelFloat="true" layoutX="236.0" layoutY="252.0" prefHeight="33.0" prefWidth="505.0" unFocusColor="#4d4d4d84">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+      <Label fx:id="lblHeading11" layoutX="96.0" layoutY="152.0" prefHeight="27.0" prefWidth="141.0" text="Actor ID" textAlignment="CENTER" textFill="#5d5e65">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblHeading111" layoutX="96.0" layoutY="208.0" prefHeight="27.0" prefWidth="141.0" text="Actor Name" textAlignment="CENTER" textFill="#5d5e65">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblHeading1111" layoutX="96.0" layoutY="264.0" prefHeight="27.0" prefWidth="141.0" text="Actor Age" textAlignment="CENTER" textFill="#5d5e65">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXButton id="btnNewUserAdded" fx:id="btnSaveActor" layoutX="298.0" layoutY="315.0" onAction="#btnSaveActor_OnAction" onMouseClicked="#btnMakePurchase_OnMouseClicked" opacity="0.88" prefHeight="39.0" prefWidth="125.0" ripplerFill="#7cdcff" style="-fx-background-color: #019ddd;" text="Save" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView fx:id="imgGoBack" fitHeight="48.0" fitWidth="103.0" layoutX="24.0" layoutY="609.0" onMouseClicked="#imgGoBack_OnMouseClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../../../../../Projects/WEB/UnCompleted/PharmacyManagementSystem/src/main/resources/icons/Capture.PNG" />
+         </image>
+      </ImageView>
+      <JFXButton id="btnNewUserAdded" fx:id="btnDeleteActor" layoutX="445.0" layoutY="315.0" onAction="#btnDeleteActor_OnAction" onMouseClicked="#btnMakePurchase_OnMouseClicked" opacity="0.88" prefHeight="39.0" prefWidth="125.0" ripplerFill="#7cdcff" style="-fx-background-color: #019ddd;" text="Delete" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TableView fx:id="tblActors" layoutX="97.0" layoutY="368.0" prefHeight="233.0" prefWidth="652.0">
+         <columns>
+            <TableColumn fx:id="tblClmActorID" prefWidth="130.0" text="Actor ID" />
+            <TableColumn fx:id="tblClmActorName" prefWidth="403.0" text="Actor Name" />
+            <TableColumn fx:id="tblClmActorAge" prefWidth="116.0" text="Actor Age" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

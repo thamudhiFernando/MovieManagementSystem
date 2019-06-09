@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="677.0" prefWidth="856.0" style="-fx-background-color: WHITE;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep.controller.RegisterActorsController">
+   <children>
+      <Label fx:id="lblHeading" alignment="CENTER" layoutX="182.0" layoutY="26.0" prefHeight="46.0" prefWidth="497.0" text="Register Actors" textAlignment="CENTER" textFill="#545e83">
+         <font>
+            <Font name="System Bold" size="31.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblHeading1" alignment="CENTER" layoutX="301.0" layoutY="67.0" prefHeight="21.0" prefWidth="260.0" text="Moive Management System" textAlignment="CENTER" textFill="#898a8fac">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField id="txtUserName" fx:id="txtMovieName" editable="false" focusColor="#019ddd" labelFloat="true" layoutX="236.0" layoutY="226.0" prefHeight="33.0" prefWidth="505.0" unFocusColor="#4d4d4d84">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+      <Label fx:id="lblHeading111" layoutX="96.0" layoutY="240.0" prefHeight="27.0" prefWidth="141.0" text="Movie Name" textAlignment="CENTER" textFill="#5d5e65">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXButton id="btnNewUserAdded" fx:id="btnSaveMovie" layoutX="375.0" layoutY="548.0" onAction="#btnSaveMovie_OnAction" onMouseClicked="#btnMakePurchase_OnMouseClicked" opacity="0.88" prefHeight="39.0" prefWidth="125.0" ripplerFill="#7cdcff" style="-fx-background-color: #019ddd;" text="Register" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView fx:id="imgGoBack" fitHeight="48.0" fitWidth="103.0" layoutX="24.0" layoutY="609.0" onMouseClicked="#imgGoBack_OnMouseClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../../../../../Projects/WEB/UnCompleted/PharmacyManagementSystem/src/main/resources/icons/Capture.PNG" />
+         </image>
+      </ImageView>
+      <JFXTextField id="txtUserName" fx:id="txtActorName" editable="false" focusColor="#019ddd" labelFloat="true" layoutX="236.0" layoutY="380.0" prefHeight="33.0" prefWidth="505.0" unFocusColor="#4d4d4d84">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField id="txtUserName" fx:id="txtActorROLE" focusColor="#019ddd" labelFloat="true" layoutX="236.0" layoutY="475.0" prefHeight="33.0" prefWidth="505.0" unFocusColor="#4d4d4d84">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+      <Label fx:id="lblHeading1111" layoutX="96.0" layoutY="394.0" prefHeight="27.0" prefWidth="141.0" text="Actor Name" textAlignment="CENTER" textFill="#5d5e65">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblHeading1111" layoutX="96.0" layoutY="487.0" prefHeight="27.0" prefWidth="141.0" text="Actor role" textAlignment="CENTER" textFill="#5d5e65">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="comboActors" focusColor="#019ddd" labelFloat="true" layoutX="94.0" layoutY="335.0" onMouseClicked="#comboActors_OnMouseClicked" prefHeight="32.0" prefWidth="644.0" promptText="Actor ID" style="-fx-border-color: lightgrey;" unFocusColor="#524545bc" visibleRowCount="2" />
+      <JFXComboBox fx:id="comboMoives" focusColor="#019ddd" labelFloat="true" layoutX="94.0" layoutY="186.0" onMouseClicked="#comboMoives_OnMouseClicked" prefHeight="32.0" prefWidth="644.0" promptText="Movie ID" style="-fx-border-color: lightgrey;" unFocusColor="#4530308d" visibleRowCount="2" />
+   </children>
+</AnchorPane>
